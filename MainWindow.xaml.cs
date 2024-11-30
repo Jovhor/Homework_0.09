@@ -28,7 +28,9 @@ namespace Homework_0._09
         private void Button_Click_Training(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Обучение.\n" +
-                "Введи предложение. Нажми на первую кнопку. Должны выйти слова.");
+                "Введи предложение.\n" +
+                "Нажми на первую кнопку.\n" +
+                "Должны выйти слова.");
         }
 
         private void Button_Click_Divide(object sender, RoutedEventArgs e)
