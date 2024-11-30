@@ -1,0 +1,96 @@
+﻿<Window x:Class="Homework_0._09.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        
+        xmlns:local="clr-namespace:Homework_0._09"
+        Title="Практическая работа 9.5" 
+        
+        MinHeight="500"
+        MaxHeight="1000"
+        MinWidth="800"
+        MaxWidth="1600"
+        
+        Height="536.842" 
+        Width="896.052">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Обучение" 
+                HorizontalAlignment="Center" 
+                Margin="5" 
+                VerticalAlignment="Center" 
+                Click="Button_Click_Training" 
+                Grid.Column="3" 
+                Grid.Row="0"/>
+        <ListBox HorizontalAlignment="Center" 
+                 x:Name="lb_Split"   
+                 Height="132" 
+                 Margin="10" 
+                 VerticalAlignment="Center" 
+                 Width="259" 
+                 Grid.Column="3" 
+                 Grid.Row="1"/>
+        <TextBox x:Name="tb_Revers"
+                HorizontalAlignment="Left"
+                Margin="10,10,0,0"
+                TextWrapping="Wrap"
+                VerticalAlignment="Top"
+                Width="260"
+                Grid.Column="2"
+                Grid.Row="2"
+                Height="132" 
+                KeyDown="tb_Revers_KeyDown"/>
+        <Button Content="Перестановка" 
+                HorizontalAlignment="Center" 
+                Margin="10" 
+                VerticalAlignment="Center" 
+                Width="261" 
+                Click="Button_Click_Shufle" 
+                Height="132" 
+                Grid.Row="1" 
+                Grid.Column="1"/>
+        <TextBox 
+                x:Name="tb_Split"
+                HorizontalAlignment="Center" 
+                Margin="10" 
+                TextWrapping="Wrap" 
+                VerticalAlignment="Center" 
+                Width="260" 
+                Height="132" 
+                KeyDown="tb_Split_KeyDown"
+                Grid.Row="1" 
+                Grid.Column="2"/>
+        <Button 
+               Content="Разделение" 
+               HorizontalAlignment="Center" 
+               Margin="10" 
+               VerticalAlignment="Center" 
+               Width="261" 
+               Click="Button_Click_Divide" 
+               Height="132"
+               Grid.Row="2" 
+               Grid.Column="1"/>
+        <Label 
+            x:Name="l_Revers" 
+            Grid.Column="3" 
+            Grid.Row="2"
+            Margin="10,10,10,0" 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"             
+            Width="259" 
+            ContentStringFormat="{}{0}"
+            Height="132"/>
+
+    </Grid>
+</Window>
